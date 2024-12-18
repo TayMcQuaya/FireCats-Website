@@ -3,8 +3,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const terminalInput = document.getElementById('terminal-input');
     const terminalBody = document.getElementById('terminal-body');
     const connectWallet = document.getElementById('connect-wallet');
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
 
-    // Terminal functionality
+    // Theme functionality - Add this new section
+    function initTheme() {
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+
+    function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    }
+
+    // Initialize theme
+    initTheme();
+    themeToggleBtn?.addEventListener('click', toggleTheme);
+
+    // Your existing terminal functionality
     terminalInput?.addEventListener('keypress', (e) => {
         if (e.key === 'Enter' && terminalInput.value.trim() !== '') {
             addTerminalLine('you>', terminalInput.value);

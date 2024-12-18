@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>:fire:cats</title>
     <link href="./_fire_cats_files/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="themes.css">
     <link rel="icon" href="https://btcfirecats.com/images/favico.png" type="image/x-icon">
 </head>
 <body>
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+        <button id="theme-toggle-btn" aria-label="Toggle theme">
+            <svg class="sun-icon" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M12 17.5c-3.04 0-5.5-2.46-5.5-5.5s2.46-5.5 5.5-5.5 5.5 2.46 5.5 5.5-2.46 5.5-5.5 5.5m0-13c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5m0 13c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5M5.5 12c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5.67 1.5 1.5 1.5 1.5-.67 1.5-1.5m15 0c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5.67 1.5 1.5 1.5 1.5-.67 1.5-1.5m-12.5-5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5m11 11c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5m0-11c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5m-11 11c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5"/>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M12 2a9.91 9.91 0 0 0-3 .46 10 10 0 0 1 0 19.08A10 10 0 1 0 12 2z"/>
+            </svg>
+        </button>
+    </div>
+
     <div class="container">
-        
         <!-- Hero Section -->
         <div class="firecat-hero">
             <div class="firecat">
@@ -121,7 +133,7 @@
     </div>
 </div>
 
-<script type="module" src="imageData.js"></script>
-<script src="script.js"></script>
+    <script type="module" src="imageData.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

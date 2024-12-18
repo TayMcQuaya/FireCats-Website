@@ -1,0 +1,139 @@
+/* themes.css */
+
+/* Theme Variables */
+:root {
+    /* Dark theme (default) */
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --text-primary: #fff;
+    --text-secondary: #ccc;
+    --accent-primary: #ff3600;
+    --accent-secondary: #ff8c00;
+    --terminal-bg: #1a1a1a;
+    --terminal-text: #fff;
+    --shadow-color: rgba(255, 54, 0, 0.2);
+    --hover-bg: rgba(255, 54, 0, 0.1);
+}
+
+/* Light theme */
+[data-theme="light"] {
+    --bg-primary: #f5f5f5;
+    --bg-secondary: #ffffff;
+    --text-primary: #0a0a0a;
+    --text-secondary: #444;
+    --accent-primary: #ff3600;
+    --accent-secondary: #ff8c00;
+    --terminal-bg: #ffffff;
+    --terminal-text: #0a0a0a;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --hover-bg: rgba(255, 94, 0, 0.1);
+}
+
+/* Theme toggle styles */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.theme-toggle button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    box-shadow: 0 2px 8px var(--shadow-color);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle button:hover {
+    transform: scale(1.1);
+}
+
+.theme-toggle svg {
+    width: 24px;
+    height: 24px;
+    color: var(--accent-primary);
+}
+
+.sun-icon {
+    display: none;
+}
+
+[data-theme="light"] .sun-icon {
+    display: block;
+}
+
+[data-theme="light"] .moon-icon {
+    display: none;
+}
+
+/* Theme-specific component styles */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.textblock {
+    background: var(--bg-secondary);
+}
+
+.textblock p {
+    color: var(--text-secondary);
+}
+
+.terminal-container {
+    background: var(--terminal-bg);
+    color: var(--terminal-text);
+    box-shadow: 0 0 20px var(--shadow-color);
+}
+
+[data-theme="light"] .terminal-container {
+    border: 1px solid var(--shadow-color);
+}
+
+.terminal-input {
+    color: var(--terminal-text);
+}
+
+.terminal-output {
+    color: var(--text-secondary);
+}
+
+.header-btn {
+    border: 2px solid var(--accent-primary);
+    color: var(--text-primary);
+}
+
+.stat {
+    color: var(--text-secondary);
+}
+
+.contact-link {
+    background: var(--hover-bg);
+}
+
+.contact-link:hover {
+    background: var(--hover-bg);
+    opacity: 0.8;
+}
+
+#table::-webkit-scrollbar-track {
+    background: var(--hover-bg);
+}
+
+#table::-webkit-scrollbar-thumb {
+    background: var(--accent-primary);
+}
+
+/* Transition effects */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@keyframes theme-fade {
+    0% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
