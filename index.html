@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>:fire:cats</title>
+    <link href="./_fire_cats_files/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://btcfirecats.com/images/favico.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Hero Section -->
+        <div class="firecat-hero">
+            <div class="firecat">
+                <div class="glow"></div>
+                <div class="cat-container">
+                    <svg class="cat" viewBox="0 0 100 100">
+                        <path d="M50 20 L30 50 L70 50 Z" />
+                        <path d="M30 45 L20 25 L35 40 Z" />
+                        <path d="M70 45 L80 25 L65 40 Z" />
+                        <path d="M30 50 L70 50 L50 85 Z" />
+                    </svg>
+                    <svg class="flames" viewBox="0 0 100 100">
+                        <path d="M30 50 Q50 20 70 50 Q50 35 30 50" fill="url(#fireGradient)" />
+                        <defs>
+                            <linearGradient id="fireGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ff3600;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#ff8c00;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+
+            <h1>:fire:cats</h1>
+            <p class="tagline">built different. powered by fire.</p>
+
+            <div class="header-buttons">
+                <button class="header-btn" onclick="toggleSection('about')">About</button>
+                <button class="header-btn" onclick="toggleSection('terminal')">AI Terminal</button>
+                <button class="header-btn" onclick="toggleSection('table')">Gallery</button>
+                <button class="header-btn" onclick="toggleSection('contact')">Contact</button>
+            </div>
+
+            <button class="cta" id="connect-wallet">CONNECT WALLET</button>
+
+            <div class="stats">
+                <div class="stat">
+                    420k
+                    <span>HOLDERS</span>
+                </div>
+                <div class="stat">
+                    69M
+                    <span>MARKET CAP</span>
+                </div>
+                <div class="stat">
+                    100x
+                    <span>POTENTIAL</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Sections -->
+        <div id="about" class="textblock textblock-hide">
+            <p>Listen up, folks, because this is the story of the purrfect little troublemakers who became the ultimate
+                power crew. When a pack of adorably clueless kittens decided to pay a visit to a rocket testing facility, they
+                quickly learned that curiosity can be a real pain in the paw. The curious critters got too close to one of the
+                rocket boosters and BOOM!</p>
+            <p>With one swift explosion, these kittens went from cute and cuddly to fierce and fabulous. The blast was so
+                powerful that the kittens were caught in the middle of it. They were set on fire and tossed around like
+                ragdolls, the blast transformed them into something special.</p>
+            <p>The kittens emerged from the explosion as a group of incredibly powerful and cute creatures - the Firecats.
+                They were imbued with a magical energy that made them stronger and more powerful. And even though they were
+                scattered all over the galaxy, they still had a powerful bond that connected them.</p>
+            <p>The :fire:cats are living, breathing proof that even in the face of disaster, something amazing can emerge.
+                These :fire:cats are the real deal, baby!</p>
+        </div>
+
+        <div id="terminal" class="textblock textblock-hide">
+            <div class="terminal-container">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <div class="terminal-button red"></div>
+                        <div class="terminal-button yellow"></div>
+                        <div class="terminal-button green"></div>
+                    </div>
+                    <div class="terminal-title">firecat@terminal ~ </div>
+                </div>
+                <div class="terminal-body" id="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">firecat></span> AI System initialized. Ready to assist.
+                    </div>
+                    <div class="terminal-line" id="input-line">
+                        <span class="prompt">you></span>
+                        <input type="text" class="terminal-input" id="terminal-input" placeholder="Ask anything...">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="table" class="textblock textblock-hide">
+            <!-- Gallery grid will be populated by JavaScript -->
+        </div>
+
+        <div id="contact" class="textblock textblock-hide">
+            <div class="contact-container">
+                <a href="http://www.twitter.com/btcfirecats" class="contact-link">
+                    <svg class="social-icon" width="64" height="64" viewBox="0 0 24 24">
+                        <path d="M16.5 4.5h2.25l-4.5 5.25 5.25 7.25h-4.75l-3.25-4.5-3.75 4.5H5.5l4.75-5.5L5.5 4.5h4.75l2.875 4.125L16.5 4.5zm-.575 11.5h1.25L8.925 5.75h-1.35l8.35 10.25z" fill="#ff3600"/>
+                    </svg>
+                </a>
+                <a href="https://discord.gg/NNYj7Pkm" class="contact-link">
+                    <svg class="social-icon" width="64" height="64" viewBox="0 0 24 24">
+                        <path d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z" fill="#ff3600"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="imageData.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
