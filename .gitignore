@@ -1,2 +1,5 @@
 merge_code.py
 merged_files.txt
+config.js
+.env
+node_modules/

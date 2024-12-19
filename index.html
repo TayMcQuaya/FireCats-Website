@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
+    <base href="/" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>:fire:cats</title>
@@ -59,18 +60,11 @@
 
         <!-- Content Sections -->
         <div id="about" class="textblock textblock-hide">
-            <p>Listen up, folks, because this is the story of the purrfect little troublemakers who became the ultimate
-                power crew. When a pack of adorably clueless kittens decided to pay a visit to a rocket testing facility, they
-                quickly learned that curiosity can be a real pain in the paw. The curious critters got too close to one of the
-                rocket boosters and BOOM!</p>
-            <p>With one swift explosion, these kittens went from cute and cuddly to fierce and fabulous. The blast was so
-                powerful that the kittens were caught in the middle of it. They were set on fire and tossed around like
-                ragdolls, the blast transformed them into something special.</p>
-            <p>The kittens emerged from the explosion as a group of incredibly powerful and cute creatures - the Firecats.
-                They were imbued with a magical energy that made them stronger and more powerful. And even though they were
-                scattered all over the galaxy, they still had a powerful bond that connected them.</p>
-            <p>The :fire:cats are living, breathing proof that even in the face of disaster, something amazing can emerge.
-                These :fire:cats are the real deal, baby!</p>
+            <p>Gather around legends. This is the story of how a pack of curious little kittens got too close to a rocket booster and BOOM—everything changed.</p>
+            <p>The blast didn’t kill them. It remade them. Fire burned through fur, flames fused with their souls, and when the smoke cleared, they weren’t kittens anymore. They were Firecats—tough, untamed, and pulsing with molten energy.</p>
+            <p>Scattered across the galaxy but bound by an unbreakable force, the Firecats are proof that disaster doesn’t destroy you—it forges you.
+            </p>
+            <p>No fluff. No fear. Just fire.</p>
         </div>
 
         <div id="terminal" class="textblock textblock-hide">
@@ -84,12 +78,10 @@
                     <div class="terminal-title">firecat@terminal ~ </div>
                 </div>
                 <div class="terminal-body" id="terminal-body">
-                    <div class="terminal-line">
-                        <span class="prompt">firecat></span> AI System initialized. Ready to assist.
-                    </div>
+                    <div id="message-container"></div>
                     <div class="terminal-line" id="input-line">
                         <span class="prompt">you></span>
-                        <input type="text" class="terminal-input" id="terminal-input" placeholder="Ask anything...">
+                        <input type="text" class="terminal-input" id="terminal-input" placeholder="Ask anything..." autocomplete="off">
                     </div>
                 </div>
             </div>
@@ -117,6 +109,6 @@
 </div>
 
     <script type="module" src="imageData.js"></script>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
