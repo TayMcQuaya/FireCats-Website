@@ -8,8 +8,5 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets'
-  },
-  // Add this section
-  publicDir: 'images',
-  assetsInclude: ['**/*.png'],
+  }
 });

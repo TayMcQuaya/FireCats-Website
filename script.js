@@ -71,61 +71,32 @@ function loadGallery(tableDiv) {
         return;
     }
 
-    // Debug: Try loading a single test image first
-    const testImg = document.createElement('img');
-    const testPath = 'images/firecat #1.png';
-    testImg.src = testPath;
-    testImg.onload = () => console.log('Test image loaded successfully:', testPath);
-    testImg.onerror = () => console.error('Test image failed to load:', testPath);
-    tableDiv.appendChild(testImg);
+    let currentRow;
+    images.forEach(([number, imageId], index) => {
+        if (index % 5 === 0) {
+            currentRow = document.createElement('div');
+            currentRow.className = 'row';
+            tableDiv.appendChild(currentRow);
+        }
 
-    // Wait a moment before loading all images
-    setTimeout(() => {
-        let currentRow;
-        images.forEach(([number, imageId], index) => {
-            // Create new row every 5 images
-            if (index % 5 === 0) {
-                currentRow = document.createElement('div');
-                currentRow.className = 'row';
-                tableDiv.appendChild(currentRow);
-            }
+        const link = document.createElement('a');
+        link.href = `https://ordinals.com/inscription/${imageId}`;
+        link.target = '_blank';
 
-            const link = document.createElement('a');
-            link.href = `https://ordinals.com/inscription/${imageId}`;
-            link.target = '_blank';
+        const img = document.createElement('img');
+        // Corrected path to serve from the public/images folder
+        img.src = `/images/firecat-${number}.png`;
+        img.alt = `Firecat #${number}`;
+        img.style.cursor = 'pointer';
 
-            const img = document.createElement('img');
-            
-            // Try different path formats
-            const paths = [
-                `images/firecat #${number}.png`,
-                `/images/firecat #${number}.png`,
-                `./images/firecat #${number}.png`,
-                `../images/firecat #${number}.png`
-            ];
+        link.appendChild(img);
+        currentRow.appendChild(link);
 
-            // Try each path
-            let pathIndex = 0;
-            img.onerror = () => {
-                console.log(`Failed to load image with path: ${paths[pathIndex]}`);
-                pathIndex++;
-                if (pathIndex < paths.length) {
-                    console.log(`Trying next path: ${paths[pathIndex]}`);
-                    img.src = paths[pathIndex];
-                } else {
-                    console.error(`All paths failed for image ${number}`);
-                    img.src = 'https://via.placeholder.com/200';
-                }
-            };
-
-            img.src = paths[0];
-            img.alt = `Firecat #${number}`;
-            img.style.cursor = 'pointer';
-            
-            link.appendChild(img);
-            currentRow.appendChild(link);
-        });
-    }, 1000);
+        img.onerror = () => {
+            console.error(`Failed to load image: firecat #${number}.png`);
+            img.src = 'https://via.placeholder.com/200'; // Fallback image
+        };
+    });
 }
 
 // Terminal Functions

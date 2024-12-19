@@ -3,3 +3,4 @@ merged_files.txt
 config.js
 .env
 node_modules/
+rename_files.py
